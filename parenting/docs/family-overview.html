@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shimon Family — Parenting Overview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 40px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f8fafc;
+    }
+    .subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    .family-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .family-member {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px 20px;
+      flex: 1;
+      text-align: center;
+    }
+    .family-member .emoji { font-size: 28px; margin-bottom: 6px; }
+    .family-member .name { font-weight: 600; font-size: 15px; color: #f8fafc; }
+    .family-member .role { font-size: 12px; color: #94a3b8; }
+
+    .kid-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .kid-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .kid-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    .roni-avatar { background: #7c3aed33; border: 2px solid #7c3aed; }
+    .yoni-avatar { background: #2563eb33; border: 2px solid #2563eb; }
+    .kid-name { font-size: 22px; font-weight: 700; color: #f8fafc; }
+    .kid-age { font-size: 13px; color: #94a3b8; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .label-personality { color: #a78bfa; }
+    .label-school { color: #60a5fa; }
+    .label-likes { color: #4ade80; }
+    .label-challenges { color: #fb923c; }
+
+    .section-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+    .tag-like { background: #4ade8020; color: #4ade80; border: 1px solid #4ade8040; }
+    .tag-challenge { background: #fb923c20; color: #fb923c; border: 1px solid #fb923c40; }
+
+    .schedule-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .schedule-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 16px;
+    }
+    .schedule-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #334155;
+      font-size: 14px;
+    }
+    .schedule-row:last-child { border-bottom: none; }
+    .schedule-label { color: #94a3b8; }
+    .schedule-value { color: #f8fafc; font-weight: 500; }
+
+    .approach-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .approach-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 16px;
+    }
+    .approach-framework {
+      background: #7c3aed15;
+      border: 1px solid #7c3aed40;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .approach-framework .fw-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: #a78bfa;
+      margin-bottom: 4px;
+    }
+    .approach-framework .fw-note {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .approach-secondary {
+      font-size: 13px;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .sibling-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .sibling-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 12px;
+    }
+    .dynamic {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .dynamic-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .dynamic-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .footer {
+      text-align: center;
+      color: #475569;
+      font-size: 12px;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Shimon Family</h1>
+  <p class="subtitle">Parenting Overview &middot; March 2026</p>
+
+  <div class="family-bar">
+    <div class="family-member">
+      <div class="emoji">👨</div>
+      <div class="name">Ori</div>
+      <div class="role">Dad</div>
+    </div>
+    <div class="family-member">
+      <div class="emoji">👩</div>
+      <div class="name">Shayna</div>
+      <div class="role">Mom</div>
+    </div>
+    <div class="family-member">
+      <div class="emoji">👧</div>
+      <div class="name">Roni</div>
+      <div class="role">5 years old</div>
+    </div>
+    <div class="family-member">
+      <div class="emoji">👦</div>
+      <div class="name">Yonatan</div>
+      <div class="role">Almost 3</div>
+    </div>
+  </div>
+
+  <!-- Roni -->
+  <div class="kid-card">
+    <div class="kid-header">
+      <div class="kid-avatar roni-avatar">👧</div>
+      <div>
+        <div class="kid-name">Roni</div>
+        <div class="kid-age">5 years old &middot; Last year of preschool</div>
+      </div>
+    </div>
+
+    <div class="section-label label-personality">Personality</div>
+    <p class="section-text">
+      Extremely curious and smart. Very sensitive — notices everything around her. A caring, wonderful big sister. Very talkative, always asking questions. Deeply attached to mommy. Cares a lot about her friends and family.
+    </p>
+
+    <div class="section-label label-school">School</div>
+    <p class="section-text">
+      JCC Palo Alto — open Hebrew immersion program. Hours: 9 AM – 4 PM, with aftercare twice a week until ~5:30 PM. Transitioning to public school in the neighborhood starting August/September 2026.
+    </p>
+
+    <div class="section-label label-likes">Likes</div>
+    <div class="tags">
+      <span class="tag tag-like">Drawing</span>
+      <span class="tag tag-like">Arts & Crafts</span>
+      <span class="tag tag-like">Magna-Tiles</span>
+      <span class="tag tag-like">Sweets</span>
+      <span class="tag tag-like">TV</span>
+      <span class="tag tag-like">Family time</span>
+      <span class="tag tag-like">Time with Mommy</span>
+    </div>
+
+    <div class="section-label label-challenges">Current Challenges</div>
+    <div class="tags">
+      <span class="tag tag-challenge">Emotional regulation</span>
+      <span class="tag tag-challenge">Big meltdowns</span>
+      <span class="tag tag-challenge">Jealousy over brother's attention</span>
+    </div>
+    <p class="section-text" style="margin-top: 4px;">
+      Hyper-aware of attention given to Yonatan by parents and others. It bothers her constantly and can trigger intense emotional reactions.
+    </p>
+  </div>
+
+  <!-- Yonatan -->
+  <div class="kid-card">
+    <div class="kid-header">
+      <div class="kid-avatar yoni-avatar">👦</div>
+      <div>
+        <div class="kid-name">Yonatan</div>
+        <div class="kid-age">Almost 3 &middot; Preschool</div>
+      </div>
+    </div>
+
+    <div class="section-label label-personality">Personality</div>
+    <p class="section-text">
+      Funny, relaxed, and chill for his age. Very cuddly and affectionate. Can keep himself busy for a long time. A good eater. Loves his big sister and is starting to care more about his friends.
+    </p>
+
+    <div class="section-label label-school">School</div>
+    <p class="section-text">
+      JCC Palo Alto (same as Roni). Hours: 9 AM – 4 PM, with aftercare twice a week until ~5:30 PM.
+    </p>
+
+    <div class="section-label label-likes">Likes</div>
+    <div class="tags">
+      <span class="tag tag-like">Reading</span>
+      <span class="tag tag-like">Being outside</span>
+      <span class="tag tag-like">Climbing</span>
+      <span class="tag tag-like">Running & Jumping</span>
+      <span class="tag tag-like">Magna-Tiles</span>
+      <span class="tag tag-like">Legos</span>
+      <span class="tag tag-like">Building stuff</span>
+      <span class="tag tag-like">Eating</span>
+      <span class="tag tag-like">TV</span>
+    </div>
+
+    <div class="section-label label-challenges">Current Challenges</div>
+    <div class="tags">
+      <span class="tag tag-challenge">TV dependency</span>
+      <span class="tag tag-challenge">Starting tantrums</span>
+      <span class="tag tag-challenge">Won't brush teeth</span>
+      <span class="tag tag-challenge">Late bedtime (9–9:30)</span>
+      <span class="tag tag-challenge">Mommy attachment</span>
+    </div>
+    <p class="section-text" style="margin-top: 4px;">
+      Asks for TV constantly. Starting small tantrums when he doesn't get his way. Teeth brushing is a big daily struggle. Falling asleep around 9:00–9:30 PM, which is too late. Seeing Roni get attention from mommy and wanting the same.
+    </p>
+  </div>
+
+  <!-- Daily Schedule -->
+  <div class="schedule-card">
+    <h2>Daily Schedule</h2>
+    <div class="schedule-row">
+      <span class="schedule-label">School drop-off</span>
+      <span class="schedule-value">9:00 AM — both kids, JCC Palo Alto</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-label">Regular pickup</span>
+      <span class="schedule-value">4:00 PM</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-label">Aftercare days (2x/week)</span>
+      <span class="schedule-value">Pickup ~5:30 PM</span>
+    </div>
+    <div class="schedule-row">
+      <span class="schedule-label">Yonatan bedtime</span>
+      <span class="schedule-value">~9:00–9:30 PM (working on earlier)</span>
+    </div>
+  </div>
+
+  <!-- Sibling Dynamics -->
+  <div class="sibling-card">
+    <h2>Sibling Dynamics</h2>
+    <div class="dynamic">
+      <div class="dynamic-icon">💜</div>
+      <div class="dynamic-text">Roni is a caring, devoted big sister. Yonatan loves her and looks up to her.</div>
+    </div>
+    <div class="dynamic">
+      <div class="dynamic-icon">⚡</div>
+      <div class="dynamic-text">Roni gets jealous when she perceives Yonatan getting more attention — from parents, grandparents, or others. She's hyper-aware of it.</div>
+    </div>
+    <div class="dynamic">
+      <div class="dynamic-icon">📺</div>
+      <div class="dynamic-text">Both kids love TV. Yonatan in particular asks for it constantly — managing screen time is an ongoing challenge.</div>
+    </div>
+    <div class="dynamic">
+      <div class="dynamic-icon">🧲</div>
+      <div class="dynamic-text">Both are increasingly attached to mommy (Shayna). Yonatan is mirroring Roni's bids for mom's attention.</div>
+    </div>
+  </div>
+
+  <!-- Parenting Approach -->
+  <div class="approach-card">
+    <h2>Parenting Approach</h2>
+    <div class="approach-framework">
+      <div class="fw-name">Dr. Becky Kennedy — Good Inside</div>
+      <div class="fw-note">Primary framework. Resonates most with Ori & Shayna. Default lens for parenting decisions.</div>
+    </div>
+    <p class="approach-secondary">Also read Hunt, Gather, Parent (Michaeleen Doucleff) — liked the ideas but found it less realistic day-to-day.</p>
+  </div>
+
+  <div class="footer">
+    Generated by Claude &middot; Shimon Family Hub &middot; March 2026
+  </div>
+
+</body>
+</html>

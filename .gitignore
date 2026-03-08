@@ -1,0 +1,11 @@
+# Claude Code local settings
+.claude/settings.json
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive documents (add specific files as needed)
+# finances/docs/statements/
+# health/docs/records/
