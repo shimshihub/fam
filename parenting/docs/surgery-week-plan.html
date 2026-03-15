@@ -29,10 +29,9 @@
         .karina { background: #e2d9f3; color: #4a235a; }
         .ori { background: #fde8d0; color: #856404; }
         .section { background: #fff; padding: 20px; border-radius: 8px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .plan-label { display: inline-block; background: #4a90d9; color: #fff; padding: 4px 12px; border-radius: 15px; font-size: 0.85em; font-weight: 600; margin-bottom: 10px; }
-        .plan-label.b { background: #6c757d; }
         .legend { display: flex; gap: 15px; flex-wrap: wrap; margin: 15px 0; }
-        .diff { border: 2px solid #ffc107; }
+        .option-box { background: #fff; border: 2px solid #ffc107; border-radius: 8px; padding: 15px; margin: 10px 0; }
+        .option-label { font-weight: 600; font-size: 0.95em; margin-bottom: 8px; }
         ul { padding-left: 20px; }
         li { margin: 5px 0; font-size: 0.9em; }
     </style>
@@ -49,10 +48,9 @@
     <span><span class="helper-tag ori">Ori</span> Dad</span>
 </div>
 
-<h2>Plan A — More Patti Help</h2>
+<h2>Weekly Schedule</h2>
 <div class="section">
-    <span class="plan-label">A</span>
-    <p>Patti's ask: regular schedule + Mon morning + <span class="highlight">Mon afternoon help</span> + Wed pickup</p>
+    <p>Patti's ask: regular schedule + Mon morning + Wed pickup + <span class="highlight">one of the Monday options below</span></p>
     <table>
         <tr>
             <th>Day</th>
@@ -60,11 +58,10 @@
             <th>Pickup</th>
             <th>Evening</th>
         </tr>
-        <tr class="diff">
+        <tr>
             <td class="day">Mon 3/16</td>
             <td><span class="helper-tag patti">Patti & David</span> take kids in morning (Ori & Shayna at hospital by 5 AM)</td>
-            <td><span class="helper-tag ori">Ori</span> picks up at 4</td>
-            <td><span class="helper-tag patti">Patti</span> comes over afternoon — help with kids / around the house</td>
+            <td colspan="2">See Monday options below</td>
         </tr>
         <tr>
             <td class="day">Tue 3/17</td>
@@ -93,48 +90,14 @@
     </table>
 </div>
 
-<h2>Plan B — Minimal Patti Ask</h2>
-<div class="section">
-    <span class="plan-label b">B</span>
-    <p>Patti's ask: regular schedule + Mon morning + Wed pickup only</p>
-    <table>
-        <tr>
-            <th>Day</th>
-            <th>Morning / Dropoff</th>
-            <th>Pickup</th>
-            <th>Evening</th>
-        </tr>
-        <tr>
-            <td class="day">Mon 3/16</td>
-            <td><span class="helper-tag patti">Patti & David</span> take kids in morning (Ori & Shayna at hospital by 5 AM)</td>
-            <td><span class="helper-tag ori">Ori</span> picks up at 4</td>
-            <td><span class="helper-tag ori">Ori</span> home (solo)</td>
-        </tr>
-        <tr>
-            <td class="day">Tue 3/17</td>
-            <td><span class="helper-tag ori">Ori</span> preps kids, <span class="helper-tag patti">Patti</span> drops off ~8 AM</td>
-            <td><span class="helper-tag ori">Ori</span> picks up at 4</td>
-            <td><span class="helper-tag ori">Ori</span> home</td>
-        </tr>
-        <tr>
-            <td class="day">Wed 3/18</td>
-            <td><span class="helper-tag ori">Ori</span> drops off at 9</td>
-            <td><span class="helper-tag patti">Patti</span> picks up ~5:30 (aftercare)</td>
-            <td><span class="helper-tag noa">Noa</span> 5:00–7:30 → <span class="helper-tag ori">Ori</span> home ~7–7:30</td>
-        </tr>
-        <tr class="diff">
-            <td class="day">Thu 3/19</td>
-            <td><span class="helper-tag ori">Ori</span> preps kids (8 AM meeting from home), <span class="helper-tag patti">Patti</span> drops off<br><span class="helper-tag karina">Karina</span> 10 AM–1 PM (laundry, meal prep, organize)</td>
-            <td><span class="helper-tag ori">Ori</span> picks up ~5:15–5:30 (aftercare, WFH)</td>
-            <td><span class="helper-tag noa">Noa</span> 5:30–8:30</td>
-        </tr>
-        <tr>
-            <td class="day">Fri 3/20</td>
-            <td><span class="helper-tag ori">Ori</span> drops off</td>
-            <td><span class="helper-tag ori">Ori</span> picks up</td>
-            <td><span class="helper-tag ori">Ori</span> home</td>
-        </tr>
-    </table>
+<h2>Monday Options (pick one to ask Patti)</h2>
+<div class="option-box">
+    <div class="option-label">Option A — Patti does pickup</div>
+    <span class="helper-tag patti">Patti</span> picks up kids at 4 → <span class="helper-tag ori">Ori</span> stays home with Shayna all afternoon
+</div>
+<div class="option-box">
+    <div class="option-label">Option B — Patti comes over in the afternoon</div>
+    <span class="helper-tag ori">Ori</span> picks up kids at 4 → <span class="helper-tag patti">Patti</span> comes over to help with kids / around the house
 </div>
 
 <h2>Meals</h2>
