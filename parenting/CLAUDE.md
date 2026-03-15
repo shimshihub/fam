@@ -14,10 +14,15 @@
 - Likes: Reading, being outside, physical play (climbing, running, jumping), Magna-Tiles, Legos, building stuff, eating, TV.
 - Current challenges: Very attached to TV — asks for it constantly. Starting to have small tantrums when he doesn't get his way. Won't brush teeth (big struggle). Getting more attached to mommy (sees Roni getting attention, wants the same). Sleep is off — falls asleep around 9:00–9:30, which is hard on the parents.
 
+## Ori's Work Schedule
+- Mondays & Wednesdays: long days, at work until 8 PM
+- Tue, Thu, Fri: works from home (flexible for pickups/dropoffs)
+
 ## Daily Routines
 - School drop-off: 9:00 AM (both kids, JCC Palo Alto)
+  - Patti (Shayna's mom) handles dropoff: every other Monday, every Tuesday, every Thursday
 - Regular pickup: 4:00 PM
-- Aftercare days (2x/week): pickup ~5:30 PM
+- Aftercare days (Wed & Thu): pickup 5:00–6:00 PM, usually ~5:15–5:30
 - Yonatan bedtime: currently landing around 9:00–9:30 (too late, working on it)
 
 ## Parenting Approach
