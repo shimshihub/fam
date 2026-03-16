@@ -14,6 +14,9 @@
 - Likes: Reading, being outside, physical play (climbing, running, jumping), Magna-Tiles, Legos, building stuff, eating, TV.
 - Current challenges: Very attached to TV — asks for it constantly. Starting to have small tantrums when he doesn't get his way. Won't brush teeth (big struggle). Getting more attached to mommy (sees Roni getting attention, wants the same). Sleep is off — falls asleep around 9:00–9:30, which is hard on the parents.
 
+## Weekly Family Rituals
+- Tuesdays: dinner at Patti & David's (Shayna's parents)
+
 ## Ori's Work Schedule
 - Mondays & Wednesdays: long days, at work until 8 PM
 - Tue, Thu, Fri: works from home (flexible for pickups/dropoffs)
